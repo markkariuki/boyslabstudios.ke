@@ -2,7 +2,7 @@
 ------------------------------------
 	Arcade - Architecture
 	Version: 1.0
- ------------------------------------ 
+ ------------------------------------
  ====================================*/
 
 
@@ -12,11 +12,11 @@
 var window_w = $(window).innerWidth();
 
 
-$(window).on('load', function() { 
+$(window).on('load', function() {
 	/*------------------
 		Preloder
 	--------------------*/
-	$(".loader").fadeOut(); 
+	$(".loader").fadeOut();
 	$("#preloder").delay(400).fadeOut("slow");
 
 	__portfolio(); // call portfolio function
@@ -128,8 +128,8 @@ $(window).on('load', function() {
 		$(this).addClass('btn-active').siblings().removeClass('btn-active');
 
 		/* Filter */
-		project.owlFilter(filter_data, function(_owl) { 
-			$(_owl).find('.single-project').each(owlAnimateFilter); 
+		project.owlFilter(filter_data, function(_owl) {
+			$(_owl).find('.single-project').each(owlAnimateFilter);
 		});
 	});
 
@@ -238,7 +238,7 @@ $(window).on('load', function() {
 		value: 0.75,
 		size: 195,
 		thickness: 20,
-		fill: "#baff00",
+		fill: "#ad5389",
 		emptyFill: "rgba(0, 0, 0, 0)"
 	});
 	//Set progress circle 2
@@ -246,7 +246,7 @@ $(window).on('load', function() {
 		value: 0.83,
 		size: 195,
 		thickness: 20,
-		fill: "#baff00",
+		fill: "#ad5389",
 		emptyFill: "rgba(0, 0, 0, 0)"
 	});
 	//Set progress circle 3
@@ -254,7 +254,7 @@ $(window).on('load', function() {
 		value: 0.25,
 		size: 195,
 		thickness: 20,
-		fill: "#baff00",
+		fill: "#ad5389",
 		emptyFill: "rgba(0, 0, 0, 0)"
 	});
 	//Set progress circle 4
@@ -262,7 +262,7 @@ $(window).on('load', function() {
 		value: 0.95,
 		size: 195,
 		thickness: 20,
-		fill: "#baff00",
+		fill: "#ad5389",
 		emptyFill: "rgba(0, 0, 0, 0)"
 	});
 
@@ -270,7 +270,7 @@ $(window).on('load', function() {
 
 
 /*------------------
-	Portfolio 
+	Portfolio
 --------------------*/
 function __portfolio(){
 
@@ -293,7 +293,7 @@ function __portfolio(){
 	// portfolio filter nav
 	$('.portfolio-filter li').on("click", function(){
 		$(".portfolio-filter li").removeClass("active");
-		$(this).addClass("active");				 
+		$(this).addClass("active");
 		var selector = $(this).attr('data-filter');
 		$container.isotope({
 				filter: selector,
@@ -314,7 +314,7 @@ function portfolio_item_size(){
 	$('#portfolio').find('.grid-item').each(function() {
 		var pi_height1 = $(this).outerWidth(true),
 		pi_height2 = pi_height1/2;
-		
+
 		if($(this).hasClass('grid-long') && window_w > 991){
 			$(this).css('height', pi_height2);
 		}else{
